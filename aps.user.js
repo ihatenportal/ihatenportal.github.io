@@ -13,7 +13,7 @@ let background = "" //don't touch this line
 
 
 
-// 這裡開始是給你們自定
+// 這裡開始是給你們自訂
 let url = "https://github.com/vinceliuice/WhiteSur-wallpapers/blob/main/4k/Ventura-dark.jpg?raw=true" //貼上背景圖片連結
 // https://github.com/vinceliuice/WhiteSur-wallpapers/blob/main/4k/Ventura-dark.jpg?raw=true
 let tablecolor = "#071b34" //輸入表格背景顏色
@@ -28,7 +28,7 @@ let tablecolor = "#071b34" //輸入表格背景顏色
 // background = "linear-gradient(red,blue)" //取消註解來使用漸層
 background = "url("+url+");" //
 
-// 自定區域結束
+// 自訂區域結束
 // ==========
 // 下面的程式碼很亂
 // 有一些程式碼完全沒用
