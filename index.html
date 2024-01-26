@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北科選課網站腳本</title>
+  <style>
+    body{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      font-family: SF Pro TC,SF Pro Text,SF Pro Icons,PingFang TC,Helvetica Neue,Helvetica,Arial,sans-serif;
+    }
+    #app{
+      width: 100%;
+      min-height: 100dvh;
+      height: 200dvh;
+      overflow-y: scroll;
+      margin: 0;
+      background: url('Ventura-dark.jpg');
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    h1,h2{
+      color: white;
+    }
+    button{
+      border-radius: 10px;
+      padding: 12px 22px;
+      background: #0077ed;
+      cursor: pointer;
+      color: rgba(255,255,255,0.92);
+      border-color: rgba(255,255,255,.08);
+      border-top-color: rgba(0, 0, 0, 0.04);
+      border-right-color: rgba(0, 0, 0, 0.04);
+      border-bottom-color: rgba(0, 0, 0, 0.04);
+      border-left-color: rgba(0, 0, 0, 0.04);
+    }
+    .pics{
+      background-color: rgba(255,255,255,0.8);
+      backdrop-filter: blur(100px);
+      border-radius: 20px;
+      width: 60dvw;
+      height: 60dvh;
+      margin: 2%;
+    }
+    .installation{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .installation h2{
+      color: black;
+    }
+    .installation div a img{
+      margin: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <div id="app">
+    <h1>北科選課網站主題</h1>
+    <h2>安裝說明</h2>
+    <button @click="toggleInstallDiv()">顯示/隱藏</button>
+    <div class="pics" v-if="showInstall">
+      <div class="installation">
+        <h2>安裝 Tampermonkey</h2>
+        <div>
+          <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank">
+            <img alt="Chrome" src="https://img.shields.io/badge/Chrome-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white">
+          </a>
+          <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/" target="_blank">
+            <img alt="Firefox" src="https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white">
+          </a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd" target="_blank">
+            <img alt="Edge" src="https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white">
+          </a>
+          <a href="https://apps.apple.com/us/app/tampermonkey/id1482490089" target="_blank">
+            <img alt="Safari(付費)" src="https://img.shields.io/badge/Safari_(付費)-000000?style=for-the-badge&logo=Safari&logoColor=white">
+          </a>
+        </div>
+        <h2>安裝腳本</h2>
+        <div>
+          <a href="./script" target="_blank">
+            <img alt="User Script" src="https://img.shields.io/static/v1?style=for-the-badge&message=User%20Script&color=00485B&logo=Tampermonkey&logoColor=FFFFFF&label=">
+          </a>
+        </div>
+        <p></p>
+        
+      </div>
+    </div>
+    <h2>截圖</h2>
+    <button @click="toggleSsDiv()">顯示/隱藏</button>
+    <div class="pics" v-if="showPics">
+      
+    </div>
+  </div>
+
+  <script>
+    const { createApp, ref } = Vue
+    createApp({
+      data(){
+        return{
+          showInstall: true,
+          showPics: false,
+        }
+      },
+      methods:{
+        toggleSsDiv(){
+          this.showPics=!this.showPics
+        },
+        toggleInstallDiv(){
+          this.showInstall=!this.showInstall
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>
