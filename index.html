@@ -25,6 +25,7 @@
       display: flex;
       align-items: center;
       flex-direction: column;
+      
     }
     #app::-webkit-scrollbar,
     body::-webkit-scrollbar{
@@ -45,6 +46,11 @@
       border-right-color: rgba(0, 0, 0, 0.04);
       border-bottom-color: rgba(0, 0, 0, 0.04);
       border-left-color: rgba(0, 0, 0, 0.04);
+      transition-duration: .5s;
+    }
+    button:hover{
+      padding: 15px 100px;
+      border-radius: 15px;
     }
     .pics{
       display: flex;
@@ -56,6 +62,12 @@
       width: 60dvw;
       min-height: 60dvh;
       margin: 2%;
+
+    }
+    img:hover{
+      transform: scale(1.05,1.05);
+      transition-duration: .5s;
+      margin-bottom: 40px;
     }
     .installation{
       display: flex;
@@ -75,6 +87,7 @@
       border-radius: 10px;
       width: 80%;
       margin-bottom: 40px;
+      transition-duration: .5s;
     }
     .bottom{
       background-color: rgba(0,0,0,0.5);
@@ -97,6 +110,7 @@
       align-items: start;
       justify-content: center;
       cursor: pointer;
+      
     }
     .gpl{
       width: 80dvw;
